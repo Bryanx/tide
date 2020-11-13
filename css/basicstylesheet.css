@@ -1,0 +1,313 @@
+/*
+magentared = #EA2E49;
+lightblue = #77C4D3;
+darkblue = #333745;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased; /* All fonts get antialiased */
+    -moz-osx-font-smoothing: grayscale; /* Also for Firefox (impossible to do this without using a vendor-extension) */
+}
+
+body {
+    font: 16px 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    background-color: white;
+}
+
+/* responsive headers, paragraphs, widths, margins, etc (with use of em) */
+@media screen and (max-width: 720px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* -----------------------------------*/
+/* ------>>> TEXT & ARTICLES <<<------*/
+/* -----------------------------------*/
+p {
+    color: #333745;
+    font: normal normal 300 1.44em/150% 'Open Sans';
+    text-align: left;
+    margin: 2em 0;
+}
+
+article {
+    box-sizing: border-box;
+    width: 82%;
+    margin: 0 9% 60px;
+    text-align: center;
+}
+
+article header {
+    text-shadow: none;
+}
+
+/* Images in articles */
+article section figure {
+    margin-top: 60px;
+}
+
+article section figure img {
+    width: 100%;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5 {
+    font-family: 'Amaranth', sans-serif;
+    margin-top: 60px;
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 25px 9%;
+    color: white;
+}
+
+h2 {
+    font-size: 3.125em;
+    line-height: 1em;
+    color: #77C4D3;
+}
+
+h3 {
+    font-size: 2.5em;
+    line-height: 1.25em;
+    color: #EA2E49;
+}
+
+h4 {
+    font-size: 1.375em;
+    line-height: 1.125em;
+    color: grey;
+    margin-top: 20px;
+}
+
+h5 {
+    font-size: 1.2em;
+    line-height: 1.125em;
+    color: grey;
+}
+
+/* -----------------------------------*/
+/* ---------->>> NAVBAR <<<-----------*/
+/* -----------------------------------*/
+nav ul {
+    box-sizing: border-box;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    background-color: #333745;
+    list-style-type: none;
+    text-shadow: 0 1px 2px #2f2f2f;
+    z-index: 10;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #77C4D3;
+    padding: 22px 25px;
+    font-size: 18px;
+}
+
+/* Makes the nav items hoverable */
+/* Also makes the current nav item active: */
+nav ul li a.hoverable:hover, nav li a.active {
+    background-color: #EA2E49;
+    color: white;
+
+}
+
+/* first nav item is moved to the center */
+.firstnavitem {
+    margin-left: 9%;
+}
+
+/* logo in navbar (last item also moved to the center)*/
+li.navlogo, .alogo {
+    float: right;
+    margin: 7px 9% 0 0;
+    padding: 0;
+}
+
+/* navbar dropdown menus */
+/* display none at first */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+}
+
+/* reveals dropdown menu on hover */
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 180px;
+    float: none;
+    position: relative;
+    background-color: #333745;
+    display: list-item;
+}
+
+nav ul li ul li a.hoverable {
+    color: #77C4D3;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* navbar responsive */
+@media screen and (max-width: 960px) {
+    .firstnavitem {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 22px 10px;
+    }
+}
+
+/* navbar list items stack vertical at width 720px */
+@media screen and (max-width: 720px) {
+    nav ul {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul li, nav ul li:hover > ul, nav li.navlogo img {
+        display: none;
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+}
+
+/* -----------------------------------*/
+/* ------->>> DEFAULT HEADER <<<------*/
+/* -----------------------------------*/
+.banner {
+    width: 100%;
+    margin: 0;
+    padding-top: 5%;
+}
+
+/* all text in the header is aligned center and has a shadow */
+header {
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow: 0 1px 2px #2f2f2f;
+}
+
+p.subintro {
+    color: white;
+    font-size: 1.875em;
+    font-weight: normal;
+    text-align: center;
+    margin: 25px 10%;
+}
+
+/* -----------------------------------*/
+/* ------>>> BUTTONS & LINKS <<<------*/
+/* -----------------------------------*/
+a:link, a:visited, a:hover, a:active {
+    color: #77C4D3;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #EA2E49;
+}
+
+.button {
+    padding: 1em 2em;
+    margin: 50px 20px;
+    border-radius: 10px;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+a.button {
+    color: white;
+    text-shadow: 0 1px 1px black;
+}
+
+a.button1:link, a.button1:visited {
+    background-color: #EA2E49;
+}
+
+a.button2:link, a.button2:visited, a.button1:hover {
+    background-color: #333745;
+}
+
+a.button2:hover {
+    background-color: #EA2E49;
+}
+
+/* -----------------------------------*/
+/* ---------->>> FOOTER <<<-----------*/
+/* -----------------------------------*/
+footer {
+    clear: both;
+    background-color: #333745;
+    padding: 60px 120px;
+    font-weight: 300;
+    border-top: 40px solid #77C4D3;
+}
+
+footer h4 {
+    text-align: left;
+    color: #EA2E49;
+    padding-top: 0.6em;
+}
+
+footer section.column {
+    width: 30%;
+    min-width: 200px;
+    padding-right: 5%;
+    box-sizing: border-box;
+    color: #EA2E49;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer section.column ul li {
+    margin-top: 0.625em;
+    font-size: 1em;
+    list-style: none;
+}
+
+footer section.column ul li a {
+    color: white;
+}
+
+footer section.column ul li a:hover {
+    background-color: #EA2E49;
+}
+
+footer p {
+    border-top: 1px solid grey;
+    padding-top: 1.5em;
+    margin: 1.5em 0 0 0;
+    font-size: 1em;
+    text-align: right;
+    color: white;
+}
